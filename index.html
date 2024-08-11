@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="dessert booking webpage">
+    <title>Dessert ordering website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header starts -->
+    <header>
+        <div class="menu" id="menu-icon"></div>
+            <h1>Sugar Snap</h1>
+            <a href="" class="icon"><i class="fa fa-bars"></i></a>
+            <ul class="items" id="items">
+                <li><a href="" class="home-active">Home</a></li>
+                <li><a href="category.html">Menu</a></li>
+                <li><a href="shop.html">Shops</a></li>
+                <li><a href="recipe.html">Recipe</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>   
+               
+    </header>
+    <!---->
+    <!-- banner section -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span>We are Sugar snap</span>
+                    <h1>Pick a treat from <br> our range of desserts</br> </h1>     
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <!-- categories include -->
+    <section class="category" id="category">
+        <div class="category-items">
+            <div class="category-item">
+                <div class="box bx1">
+                    <img src="images/cake.avif" alt="Category Image 1">
+                </div>
+                <h1>Cakes</h1>
+                <i class="bx bx-right-arrow-alt"></i> 
+            </div>
+            <div class="category-item">
+                <div class="box bx2">
+                    <img src="images/pie.avif" alt="Category Image 2">
+                </div>
+                <h1>pies</h1>
+                <i class="bx bx-right-arrow-alt"></i> 
+            </div>
+            <div class="category-item">
+                <div class="box bx3">
+                    <img src="images/cookies.avif" alt="Category Image 3">
+                </div>
+                <h1>cookies</h1>
+                <i class="bx bx-right-arrow-alt"></i> 
+            </div>
+            <div class="category-item">
+                <div class="box bx4">
+                    <img src="images/candies.avif" alt="Category Image 4">
+                </div>
+                <h1>Candies</h1>
+                <i class="bx bx-right-arrow-alt"></i> 
+            </div>
+            <div class="category-item">
+                <div class="box bx5">
+                    <img src="images/icecream.avif" alt="Category Image 5">
+                </div>
+                <h1>Ice creams</h1>
+                <i class="bx bx-right-arrow-alt"></i> 
+            </div>
+            <div class="category-item">
+                <div class="box bx6">
+                    <img src="images/pancake.avif" alt="Category Image 6">
+                </div>
+                <h1>Pancake</h1>
+                <i class="bx bx-right-arrow-alt"></i> 
+            </div>
+            <div class="category-item">
+                <div class="box bx7">
+                    <img src="images/brownie.avif" alt="Category Image 7">
+                </div>
+                <h2>Brownies</h2>
+                <i class="bx bx-right-arrow-alt"></i> 
+            </div>
+            <div class="category-item">
+                <div class="box bx8">
+                    <img src="images/donut.avif" alt="Category Image 8">
+                </div>
+                <h2>Donut</h2>
+                <i class="bx bx-right-arrow-alt"></i> 
+            </div>
+        </div>
+    </section>
+    <!---->
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Sugar snap</h3>
+                <p>&copy; 2024 Sugar snap. All rights reserved.</p>
+            </div>
+            <div class="footer-center">
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><a href="https://www.facebook.com/login.php/">Facebook</a></li>
+                    <li><a href="https://x.com/?lang=en">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!---->
+    <script>
+        let menu = document.querySelector('.icon');
+        let navbar = document.querySelector('.items')
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-solid fa-xmark');
+            navbar.classList.toggle('open');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-solid fa-xmark');
+            navbar.classList.remove('open');
+        }
+    </script>
+</body>
+</html>

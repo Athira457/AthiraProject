@@ -1,0 +1,507 @@
+/* common styles */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    color: black;
+    background-image: url("images/cover.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(177, 114, 55);
+    padding: 20px 100px;
+    transition: 0.5s;   
+}
+
+.items{
+display: flex;
+column-gap: 0.5rem;
+}
+
+.items a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 1rem;
+}
+
+.items a:hover, .items .home-active{
+    background-color: chocolate;
+    border-radius: 5rem;
+    color: rgb(52, 211, 150);
+    transition: 0.5s;
+}
+
+section{
+    padding: 4.5rem 0 1.5rem;
+}
+
+
+/* home page styles */
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+}
+
+.home-text{
+    padding: 0 150px;
+}
+
+
+.home-text span{
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgb(92, 56, 23);
+}
+
+.home-text h1{
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+
+/* category section styles */
+.category {
+    padding: 20px;
+    background-color: #ccc;
+}
+
+.category-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 100px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.box {
+    width: 100%;
+    height: 130px; 
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+span{
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: brown;
+}
+
+i.bx {
+    font-size: 20px;
+    color: #007bff;
+}
+
+@media (max-width: 500px) {
+
+    .box img{
+        height: 200px;
+        width: 350px;
+    }
+}
+
+
+/* product page styles */
+.product-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 55px;
+    padding-left: 60px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    margin-top: 10%;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    max-height: 100px;
+    border-radius: 10px 10px 0 0;
+}
+
+.product h3 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px 0;
+}
+
+.product p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    color: #613e0a;
+}
+
+.product .buttons {
+    display: grid;
+    gap: 10px;
+}
+
+
+/* about page styles */
+.about-us {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;  
+}
+
+.about-us h1{
+    color: rgba(138, 78, 22, 0.76);
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about-content img {
+    max-width: 50%;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: rgb(250, 248, 248) solid;
+    margin-right: 20px;
+}
+
+.about-text {
+    background-color: #ccc;
+    padding: 2% 2% 2% 2%;
+    border-radius: 10%;
+    max-width: 600px;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+/* responsive about page */
+@media (max-width: 500px) {
+
+    .about-content img{
+        max-height: 200px;
+    }
+
+    .about-text{
+        margin: 20px 5px 0 20px;
+    }
+
+}
+
+
+/* contact page syles */
+.contact-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-box{
+    border: #333;
+    padding-left: 50px;
+    max-width: 900px;
+}
+
+.contact-form{
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-control{
+    margin-bottom: 1rem;
+}
+
+textarea{
+    width: 100%;
+    height: 150px;
+    resize: vertical;
+}
+
+
+
+/* responsive contact page */
+@media (max-width: 500px) {
+
+    .contact-box{
+        margin-right: 50px;
+        margin-left: 5px;
+    }
+
+}
+
+
+/* recipe page styles */
+.recipe {
+    background-color: #ccc;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 7% 0 5% 20%;
+    padding: 20px;
+}
+
+.recipe-header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #723309cb;
+    margin-bottom: 10px;
+}
+
+.recipe-header p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #777;
+}
+
+.recipe-image img {
+    height: 30%;
+    width: 20%;
+    border-radius: 8px;
+    float: left;
+    margin-left: 20px;
+}
+
+.recipe-desc{
+    font-size: 1.3em;
+    color: #555;
+    margin: 20px 10px 20px 200px;
+}
+
+.recipe-details li {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+/* responsive recipe page */
+@media (max-width: 500px) {
+
+    .recipe{
+        margin: 90px 10px 0 10px;
+    }
+
+    .recipe-content {
+        flex-direction: column;
+    }
+
+    .recipe-desc{
+        display: inline;
+    }
+
+    .recipe-image {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+/* shop booking styles */
+.booking-container {
+    background-color: #cfc3b7;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 50px auto;
+    margin-top: 100px;
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#confirmationMessage {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #000;
+    text-align: center;
+}
+
+/* responsive shop page */
+@media (max-width: 500px) {
+
+    .booking-container{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+}
+
+
+/* footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+}
+
+.footer-left h3 {
+    margin: 0;
+}
+
+.footer-left p, .footer-center p, .footer-right ul {
+    margin: 10px 0 0;
+}
+
+.footer-center p a, .footer-right ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.footer-right ul li {
+    margin: 0 10px;
+}
+
+.footer-right ul li a:hover, .footer-center p a:hover {
+    text-decoration: underline;
+}
+
+.icon{
+    display: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* responsive menubar */
+
+@media screen and (max-width:500px) {
+
+    .menu {
+        align-self: flex-end; 
+    }
+    .items{ 
+        font-size: 24px;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+    .items li{
+        font-size: small;
+        margin: 25px 0 20px 0;
+    }
+
+}
+

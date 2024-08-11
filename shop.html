@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="dessert booking webpage">
+    <title>shop page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+<body>
+    <!-- header starts -->
+    <header>
+        <div class="menu" id="menu-icon"></div>
+        <h1>Sugar Snap</h1>
+        <ul class="items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Menu</a></li>
+            <li><a href="" class="home-active">Shops</a></li>
+            <li><a href="recipe.html">Recipe</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>       
+    </header>
+    <!---->
+    <!-- seat booking form -->
+    <div class="booking-container">
+        <h1>Book a Seat at Your Favorite Pastry shop</h1>
+        <form id="bookingForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="shop">Choose shop:</label>
+                <select id="shop" name="shop" required>
+                    <option value="" disabled selected>Select a shop</option>
+                    <option value="Cake hut">Cake hut</option>
+                    <option value="Pandhal cake shop">Pandhal cake shop</option>
+                    <option value="Puffy clouds">Puffy clouds</option>
+                    <option value="Kremey heaven">Kremey heaven</option>
+                    <option value="Frozen bottle">Frozen bottle</option>
+                    <option value="Choc o lick">Choc o lick</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <span id="date-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span id="email-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="10" required>
+            </div>
+            <button type="submit">Book Now</button>
+        </form>
+        <p id="confirmationMessage"></p>
+    </div>
+    <!---->
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h1>Sugar snap</h1>
+                <p>&copy; 2024 Sugar snap. All rights reserved.</p>
+            </div>
+            <div class="footer-center">
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><a href="https://www.facebook.com/login.php/">Facebook</a></li>
+                    <li><a href="https://x.com/?lang=en">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!---->
+    <!-- conformation message -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+
+    const shop = document.getElementById('shop').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const guests = document.getElementById('guests').value;
+
+
+    const confirmationMessage = `Thank you, ${name}! Your seat at ${shop} for ${guests} guest on ${date} at ${time} has been successfully booked. Check mail.`;
+    document.getElementById('confirmationMessage').innerText = confirmationMessage;
+
+ 
+    document.getElementById('bookingForm').reset();
+});
+
+
+    </script>
+    <!---->
+    <!-- form validation -->
+    <script>
+        function validateForm() {
+            const selectDate = document.getElementById("date").value;
+            const now = new Date();
+            const email = document.getElementById("email").value;
+
+            const emailError = document.getElementById("email-error");
+            const dateError = document.getElementById("date-error");
+
+            emailError.textContent = "";
+            dateError.textContent = "";
+
+            let isValid = true;
+
+            if ( selectDate < now ) {
+                dateError.textContent = "Please enter a valid date.";
+                isValid = false;
+            }
+
+            if (email === "" || !email.includes("@")) {
+                emailError.textContent = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+        return isValid;
+        }
+    </script>
+    <!---->
+</body>
+</html>
